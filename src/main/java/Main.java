@@ -27,14 +27,20 @@ public class Main {
         students.add(student4);
         students.add(student5);
 
-
         StudentDB newDB = new StudentDB(students);
         System.out.println(newDB);
 
-        ComputerScienceStudent student6 = new ComputerScienceStudent
+        newDB.remove(student1);
+        System.out.println(newDB);
+
+        newDB.removeWithId(333);
+        System.out.println(newDB);
+
+
+       /* ComputerScienceStudent student6 = new ComputerScienceStudent
                 ("Marius", 666, "Java", "Hamburg", "MNO123");
         System.out.println(student6);
-
+        */
     }
 
 }

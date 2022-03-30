@@ -33,7 +33,8 @@ public class StudentDB {
     public ArrayList<Student> removeWithId(int id){
         for (Student studentbuffer : this.students){
             if(studentbuffer.getID() == id){
-                return this.students;
+                students.remove(studentbuffer);
+                break;
             }
         }
     return this.students;
@@ -49,6 +50,5 @@ public class StudentDB {
                 "students=" + students +
                 '}';
     }
-
 }
 

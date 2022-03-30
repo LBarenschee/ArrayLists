@@ -2,41 +2,44 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class StudentDB {
-    public void setStudents(ArrayList<Student> students) {
+    ArrayList<Student> students;
+
+    public StudentDB(ArrayList<Student> students) {
         this.students = students;
     }
 
-    public StudentDB(Student[] students) {
-        this.students = students;
-    }
-
-    public Student[] getAllStudents(){
+    public ArrayList<Student> getAllStudents(){
         return students;
     }
 
     public Student randomStudent(){
-        int index = (int) ((double) students.length * Math.random());
-        return students[index];
+        int index = (int) ((double) students.size() * Math.random());
+        return students.get(index);
     }
 
     public void addStudent(Student newStudent){
-        students = Arrays.copyOf(students, students.length +1);
-        students[students.length -1] = newStudent;
+        students.add(newStudent);
     }
 
-    public Student[] getStudents() {
+    public boolean remove(Student oldStudent){
+        students.remove(oldStudent);
+        return true;
+    }
+
+    public ArrayList<Student> getStudents() {
         return students;
     }
 
     @Override
     public String toString() {
-        return "model.StudentDB{" +
-                "students=" + Arrays.toString(students) +
+        return "StudentDB{" +
+                "students=" + students +
                 '}';
     }
 
-
-
 }
+

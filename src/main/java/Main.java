@@ -1,5 +1,7 @@
 import model.*;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -16,7 +18,14 @@ public class Main {
 
         ComputerScienceStudent student5 = new ComputerScienceStudent
                 ("Paul Paulsen", 555, "Java", "Hamburg", "JKL123");
-        Student[] students = {student1, student2, student3, student4, student5};
+
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(student1);
+        students.add(student2);
+        students.add(student3);
+        students.add(student4);
+        students.add(student5);
+
 
         StudentDB newDB = new StudentDB(students);
         System.out.println(newDB);

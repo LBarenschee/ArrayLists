@@ -6,15 +6,16 @@ public class Main {
 
     public static void main(String[] args) {
         ComputerScienceStudent student1 = new ComputerScienceStudent
-        ("Klaus Klausen", 111, "Java", "Hamburg", "ABC123");
+                ("Klaus Klausen", 111, "Java", "Hamburg", "ABC123");
 
         ComputerScienceStudent student2 = new ComputerScienceStudent
-        ("Jan Jansen", 222, "Java", "Hamburg", "DEF123");
+                ("Jan Jansen", 222, "Java", "Hamburg", "DEF123");
 
         ComputerScienceStudent student3 = new ComputerScienceStudent
                 ("Hinrich Hinrichsen", 333, "Java", "Hamburg", "GHI123");
 
-        ChemistryStudent student4 = new ChemistryStudent("Jonas Jonasson", 444, "Tests");
+        ChemistryStudent student4 = new ChemistryStudent
+                ("Jonas Jonasson", 444, "Tests");
 
         ComputerScienceStudent student5 = new ComputerScienceStudent
                 ("Paul Paulsen", 555, "Java", "Hamburg", "JKL123");

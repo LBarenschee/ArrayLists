@@ -30,6 +30,15 @@ public class StudentDB {
         return true;
     }
 
+    public ArrayList<Student> removeWithId(int id){
+        for (Student studentbuffer : this.students){
+            if(studentbuffer.getID() == id){
+                return this.students;
+            }
+        }
+    return this.students;
+    }
+
     public ArrayList<Student> getStudents() {
         return students;
     }
